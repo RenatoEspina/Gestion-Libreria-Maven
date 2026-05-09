@@ -74,9 +74,9 @@
                 <configuration>
                     <mainClass>gestionLibreria.Main</mainClass>
                     <options>
-                        <option>-Dfile.encoding=COMPAT</option>
-                        <option>-Dstdout.encoding=COMPAT</option>
-                        <option>-Dstderr.encoding=COMPAT</option>
+                        <option>-Dfile.encoding=UTF-8</option>
+                        <option>-Dstdout.encoding=UTF-8</option>
+                        <option>-Dstderr.encoding=UTF-8</option>
                     </options>
                 </configuration>
             </plugin>
