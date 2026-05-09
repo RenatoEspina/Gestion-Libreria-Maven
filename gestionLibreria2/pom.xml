@@ -10,21 +10,12 @@
     <version>1.0</version>
 
     <properties>
-
-        <!-- Java -->
         <maven.compiler.release>18</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <!-- JavaFX -->
         <javafx.version>21</javafx.version>
-
     </properties>
 
     <dependencies>
-
-        <!-- ========================= -->
-        <!-- Apache POI -->
-        <!-- ========================= -->
 
         <dependency>
             <groupId>org.apache.poi</groupId>
@@ -38,10 +29,6 @@
             <version>5.2.5</version>
         </dependency>
 
-        <!-- ========================= -->
-        <!-- JavaFX -->
-        <!-- ========================= -->
-
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
@@ -54,16 +41,11 @@
             <version>${javafx.version}</version>
         </dependency>
 
-        <!-- NECESARIO PARA SwingNode -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-swing</artifactId>
             <version>${javafx.version}</version>
         </dependency>
-
-        <!-- ========================= -->
-        <!-- JFreeChart -->
-        <!-- ========================= -->
 
         <dependency>
             <groupId>org.jfree</groupId>
@@ -76,36 +58,26 @@
     <build>
         <plugins>
 
-            <!-- ========================= -->
-            <!-- Compilador -->
-            <!-- ========================= -->
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
-
                 <configuration>
                     <release>18</release>
                 </configuration>
             </plugin>
 
-            <!-- ========================= -->
-            <!-- JavaFX -->
-            <!-- ========================= -->
-
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
-
                 <configuration>
-
-                    <!-- Clase principal -->
-                    <mainClass>
-                        gestionLibreria.Main
-                    </mainClass>
-
+                    <mainClass>gestionLibreria.Main</mainClass>
+                    <options>
+                        <option>-Dfile.encoding=COMPAT</option>
+                        <option>-Dstdout.encoding=COMPAT</option>
+                        <option>-Dstderr.encoding=COMPAT</option>
+                    </options>
                 </configuration>
             </plugin>
 
